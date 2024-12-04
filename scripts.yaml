@@ -14,10 +14,7 @@ time:
     on_time_sync:
       - script.execute: date_update
     on_time:
-      - minutes: /1
-        seconds: 0
-        then:
-          - script.execute: date_update
+      - script.execute: date_update
 
 script:
   - id: update_weather_icon
