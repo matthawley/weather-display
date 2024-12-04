@@ -21,6 +21,14 @@ font:
       "\U000F059E", # windy-variant
       "\U000F14E4", # sunny-off
       ]
+  - file: https://github.com/Pictogrammers/pictogrammers.github.io/raw/refs/heads/main/@mdi/font/7.4.47/fonts/materialdesignicons-webfont.ttf
+    id: icons_24
+    size: 24
+    bpp: 4
+    glyphs: [
+      "\U000F050F", # thermometer
+      "\U000F058E", # water-percent
+      ]
 
 lvgl:
   pages:
@@ -59,12 +67,30 @@ lvgl:
                   grid_cell_y_align: CENTER
 
               - label:
+                  text: "\U000F050F"
+                  text_font: icons_24
+                  text_align: CENTER
+                  grid_cell_row_pos: 1
+                  grid_cell_column_pos: 1
+                  grid_cell_x_align: CENTER
+                  grid_cell_y_align: CENTER
+              
+              - label:
                   text: "--\u00B0F"
                   id: lbl_weather_forecast_condition_temperature
                   text_align: CENTER
                   grid_cell_row_pos: 1
                   grid_cell_column_pos: 2
                   grid_cell_x_align: STRETCH
+                  grid_cell_y_align: CENTER
+
+              - label:
+                  text: "\U000F058E"
+                  text_font: icons_24
+                  text_align: CENTER
+                  grid_cell_row_pos: 2
+                  grid_cell_column_pos: 1
+                  grid_cell_x_align: CENTER
                   grid_cell_y_align: CENTER
 
               - label:
