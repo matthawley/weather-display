@@ -1,64 +1,3 @@
-font:
-  - id: roboto_sm
-    file:
-      type: gfonts
-      family: Roboto
-    size: 14
-    bpp: 4
-
-  - id: roboto_md
-    file:
-      type: gfonts
-      family: Roboto
-    size: 18
-    bpp: 4
-
-  - id: roboto_lg
-    file:
-      type: gfonts
-      family: Roboto
-    size: 22
-    bpp: 4
-
-  - id: roboto_xlg
-    file:
-      type: gfonts
-      family: Roboto
-    size: 26
-    bpp: 4
-
-  - file: https://github.com/Pictogrammers/pictogrammers.github.io/raw/refs/heads/main/@mdi/font/7.4.47/fonts/materialdesignicons-webfont.ttf
-    id: icons_lg
-    size: 100
-    bpp: 4
-    glyphs: [
-      "\U000F0594", # clear-night
-      "\U000F0590", # cloudy
-      "\U000F0F2F", # exceptional
-      "\U000F0591", # fog
-      "\U000F0592", # hail
-      "\U000F0593", # lightning
-      "\U000F067E", # lightning-rainy
-      "\U000F0595", # partlycloudy
-      "\U000F0596", # pouring
-      "\U000F0597", # rainy
-      "\U000F0598", # snowy
-      "\U000F067F", # snowy-rainy
-      "\U000F0599", # sunny
-      "\U000F059D", # windy
-      "\U000F059E", # windy-variant
-      "\U000F14E4", # sunny-off
-      ]
-
-  - file: https://github.com/Pictogrammers/pictogrammers.github.io/raw/refs/heads/main/@mdi/font/7.4.47/fonts/materialdesignicons-webfont.ttf
-    id: icons_md
-    size: 24
-    bpp: 4
-    glyphs: [
-      "\U000F050F", # thermometer
-      "\U000F058E", # water-percent
-      ]
-
 lvgl:
   default_font: roboto_lg
   pages:
@@ -154,6 +93,16 @@ lvgl:
                   grid_cell_column_span: 3
                   grid_cell_x_align: CENTER
                   grid_cell_y_align: CENTER
+
+text_sensor:
+  - platform: homeassistant
+    id: weather_temperature
+    entity_id: sensor.precipitation_station_temperature
+    on_value:
+      then:
+        - lvgl.label.update:
+            id: lbl_weather_forecast_condition_temperature
+            text: !lambda return x;
 
 text:
   - platform: lvgl
