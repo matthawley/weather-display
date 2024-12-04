@@ -1,3 +1,7 @@
+time:
+  - id: ha_time
+    platform: homeassistant
+    
 text_sensor:
   - platform: homeassistant
     id: weather_state
@@ -7,28 +11,11 @@ text_sensor:
     on_value:
       then:
         - script.execute: update_weather_icon
-
-time:
-  - id: ha_time
-    platform: homeassistant
-
-text_sensor:
   - platform: template
     name: "Current Time"
     id: current_time
     update_interval: 10s
     lambda: return  id(ha_time).now().strftime("%H%M");
-
-script:
-text_sensor:
-  - platform: homeassistant
-    id: weather_state
-    entity_id: weather.precipitation_station
-    filters:
-      - to_lower:
-    on_value:
-      then:
-        - script.execute: update_weather_icon
 
 script:
   id: update_weather_icon
