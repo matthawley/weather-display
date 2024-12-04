@@ -103,7 +103,7 @@ sensor:
         - lvgl.label.update:
             id: lbl_weather_forecast_condition_temperature
             text:
-              format: "%.0f °F"
+              format: "%.0f \u00b0F"
               args: [ 'x' ]
 
   - id: weather_humidity
@@ -115,7 +115,7 @@ sensor:
         - lvgl.label.update:
             id: lbl_weather_forecast_condition_humidity
             text:
-              format: "%.0f%"
+              format: "%.0f \u0025"
               args: [ 'x' ]
 
 text:
