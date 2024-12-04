@@ -20,6 +20,13 @@ font:
     size: 22
     bpp: 4
 
+  - id: roboto_xlg
+    file:
+      type: gfonts
+      family: Roboto
+    size: 26
+    bpp: 4
+
   - file: https://github.com/Pictogrammers/pictogrammers.github.io/raw/refs/heads/main/@mdi/font/7.4.47/fonts/materialdesignicons-webfont.ttf
     id: icons_lg
     size: 100
@@ -53,7 +60,7 @@ font:
       ]
 
 lvgl:
-  default_font: roboto_md
+  default_font: roboto_lg
   pages:
     - id: weather_forecast
       widgets:
@@ -82,7 +89,9 @@ lvgl:
               - label:
                   text: "12-03-2024"
                   id: lbl_weather_forecast_condition_date
+                  text_font: roboto_xlg
                   text_align: CENTER
+                  color: teal
                   grid_cell_row_pos: 0
                   grid_cell_column_pos: 1
                   grid_cell_column_span: 2
@@ -129,6 +138,7 @@ lvgl:
                   text: "LOADING..."
                   id: lbl_weather_forecast_condition_state
                   text_align: CENTER
+                  text_font: roboto_md
                   grid_cell_row_pos: 3
                   grid_cell_column_pos: 0
                   grid_cell_column_span: 3
@@ -138,7 +148,9 @@ lvgl:
               - label:
                   text: "Last Update: 10:47"
                   id: lbl_weather_forecast_condition_last_updated
+                  text_font: roboto_sm
                   text_align: CENTER
+                  color: grey
                   grid_cell_row_pos: 4
                   grid_cell_column_pos: 0
                   grid_cell_column_span: 3
