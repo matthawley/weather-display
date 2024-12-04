@@ -157,24 +157,24 @@ lvgl:
                   grid_cell_x_align: CENTER
                   grid_cell_y_align: CENTER
 
-  text:
-    - platform: lvgl
-      name: icon
-      widget: lbl_weather_forecast_condition_icon
-      mode: text
-    - platform: lvgl
-      name: date
-      widget: lbl_weather_forecast_condition_date
-      mode: text
-    - platform: lvgl
-      name: temperature
-      widget: lbl_weather_forecast_condition_temperature
-      mode: text
-    - platform: lvgl
-      name: humidity
-      widget: lbl_weather_forecast_condition_humidity
-      mode: text
-    - platform: lvgl
-      name: last_updated
-      widget: lbl_weather_forecast_condition_last_updated
-      mode: text
+text:
+  - platform: lvgl
+    name: icon
+    widget: lbl_weather_forecast_condition_icon
+    mode: text
+  - platform: lvgl
+    name: date
+    widget: lbl_weather_forecast_condition_date
+    mode: text
+  - platform: lvgl
+    name: temperature
+    widget: lbl_weather_forecast_condition_temperature
+    mode: text
+  - platform: lvgl
+    name: humidity
+    widget: lbl_weather_forecast_condition_humidity
+    mode: text
+  - platform: lvgl
+    name: last_updated
+    widget: lbl_weather_forecast_condition_last_updated
+    mode: text
