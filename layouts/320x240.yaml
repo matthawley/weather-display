@@ -43,7 +43,6 @@ lvgl:
                   text_font: icons_100
                   text_align: CENTER
                   grid_cell_row_pos: 1
-                  grid_cell_row_span: 3
                   grid_cell_column_pos: 0
                   grid_cell_column_span: 2
                   grid_cell_x_align: CENTER
