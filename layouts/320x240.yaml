@@ -115,7 +115,7 @@ sensor:
         - lvgl.label.update:
             id: lbl_weather_forecast_condition_humidity
             text:
-              format: "%.0f \u0025"
+              format: "%.0f %%"
               args: [ 'x' ]
 
 text:
