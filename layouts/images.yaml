@@ -1,0 +1,56 @@
+image:
+  - id: clear_night
+    file: '../custom_icons/weather/clear_night.png'
+    resize: 128x128
+    type: RGB565
+    use_transparency: True
+  - id: cloudy
+    file: '../custom_icons/weather/cloudy.png'
+    resize: 128x128
+    type: RGB565
+    use_transparency: True
+  - id: foggy
+    file: '../custom_icons/weather/foggy.png'
+    resize: 128x128
+    type: RGB565
+    use_transparency: True
+  - id: partly_cloudy_night
+    file: '../custom_icons/weather/partly_cloudy_night.png'
+    resize: 128x128
+    type: RGB565
+    use_transparency: True
+  - id: partly_cloudy
+    file: '../custom_icons/weather/partly_cloudy.png'
+    resize: 128x128
+    type: RGB565
+    use_transparency: True
+  - id: rainy
+    file: '../custom_icons/weather/rainy.png'
+    resize: 128x128
+    type: RGB565
+    use_transparency: True
+  - id: snowy
+    file: '../custom_icons/weather/snowy.png'
+    resize: 128x128
+    type: RGB565
+    use_transparency: True
+  - id: stormy
+    file: '../custom_icons/weather/stormy.png'
+    resize: 128x128
+    type: RGB565
+    use_transparency: True
+  - id: sunny
+    file: '../custom_icons/weather/sunny.png'
+    resize: 128x128
+    type: RGB565
+    use_transparency: True
+  - id: thunder
+    file: '../custom_icons/weather/thunder.png'
+    resize: 128x128
+    type: RGB565
+    use_transparency: True
+  - id: windy
+    file: '../custom_icons/weather/windy.png'
+    resize: 128x128
+    type: RGB565
+    use_transparency: True
