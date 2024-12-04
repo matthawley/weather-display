@@ -165,10 +165,10 @@ lvgl:
                   grid_cell_y_align: CENTER
 
 text:
-  - platform: lvgl
-    name: icon
-    widget: lbl_weather_forecast_condition_icon
-    mode: text
+  #- platform: lvgl
+  #  name: icon
+  #  widget: lbl_weather_forecast_condition_icon
+  #  mode: text
   - platform: lvgl
     name: date
     widget: lbl_weather_forecast_condition_date
