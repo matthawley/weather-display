@@ -75,16 +75,23 @@ lvgl:
               grid_rows: [FR(25), FR(20), FR(20), FR(20), FR(15)]
               grid_columns: [FR(50), FR(10), FR(40)]
             widgets:
-              - label:
-                  text: "\U000F14E4"
-                  id: lbl_weather_forecast_condition_icon
-                  text_font: icons_lg
-                  text_align: CENTER
-                  grid_cell_row_pos: 0
-                  grid_cell_row_span: 3
-                  grid_cell_column_pos: 0
-                  grid_cell_x_align: CENTER
-                  grid_cell_y_align: CENTER
+              #- label:
+              #    text: "\U000F14E4"
+              #    id: lbl_weather_forecast_condition_icon
+              #    text_font: icons_lg
+              #    text_align: CENTER
+              #    grid_cell_row_pos: 0
+              #    grid_cell_row_span: 3
+              #    grid_cell_column_pos: 0
+              #    grid_cell_x_align: CENTER
+              #    grid_cell_y_align: CENTER
+              - image:
+                src: sunny
+                grid_cell_row_pos: 0
+                grid_cell_row_span: 3
+                grid_cell_column_pos: 0
+                grid_cell_x_align: CENTER
+                grid_cell_y_align: CENTER
 
               - label:
                   text: "12-03-2024"
@@ -178,3 +185,4 @@ text:
     name: last_updated
     widget: lbl_weather_forecast_condition_last_updated
     mode: text
+
