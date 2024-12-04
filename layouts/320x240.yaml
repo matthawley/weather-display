@@ -86,12 +86,12 @@ lvgl:
               #    grid_cell_x_align: CENTER
               #    grid_cell_y_align: CENTER
               - image:
-                src: sunny
-                grid_cell_row_pos: 0
-                grid_cell_row_span: 3
-                grid_cell_column_pos: 0
-                grid_cell_x_align: CENTER
-                grid_cell_y_align: CENTER
+                  src: sunny
+                  grid_cell_row_pos: 0
+                  grid_cell_row_span: 3
+                  grid_cell_column_pos: 0
+                  grid_cell_x_align: CENTER
+                  grid_cell_y_align: CENTER
 
               - label:
                   text: "12-03-2024"
