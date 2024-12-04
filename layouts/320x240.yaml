@@ -108,7 +108,7 @@ lvgl:
                   grid_cell_y_align: CENTER
               
               - label:
-                  text: "--\u 00B0F"
+                  text: "-- \u00B0F"
                   id: lbl_weather_forecast_condition_temperature
                   text_align: CENTER
                   grid_cell_row_pos: 1
