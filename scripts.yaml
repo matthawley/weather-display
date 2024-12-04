@@ -29,7 +29,7 @@ script:
             static const char * const mon_names[] = {"JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"};
             static char date_buf[12];
             auto now = id(ha_time).now();
-            snprintf(date_buf, sizeof(date_buf), "%s %2d %d", mon_names[now.month-1], now.day_of_month, now.year);
+            snprintf(date_buf, sizeof(date_buf), "%s %d %d", mon_names[now.month-1], now.day_of_month, now.year);
             return date_buf;
   - id: update_weather_icon
     then:
