@@ -9,15 +9,23 @@ text_sensor:
         - script.execute: update_weather_icon
 
 time:
-  - id: current_date
-    platform: sntp
-    on_time:
-      - seconds: 10
-        then:
-          - logger.log: Time trigger executed
-          #- lvgl.label.update:
-          #    id: lbl_weather_forecast_condition_date
-          #    text:
+  - id: ha_time
+    platform: homeassistant
+
+text_sensor:
+  - id: current_time
+    platform: template
+    lambda: |-
+      char str[17];
+      time_t currTime = id(ha_time).now().timestamp;
+      strftime(str, sizeof(str), "%Y-%m-%d", localtime(&currTime));
+      return { str };
+    update_interval: 10s
+    on_value:
+      then:
+        - lvgl.label.update:
+            id: lbl_weather_forecast_condition_date
+            text: !lambda return x;
 
 script:
   - id: update_weather_icon
@@ -154,15 +162,3 @@ script:
             - lvgl.label.update:
                 id: lbl_weather_forecast_condition_state
                 text: "WINDY"
-
-- id: date_update
-  then:
-    - lvgl.label.update:
-        id: lbl_weather_forecast_condition_date
-        text: !lambda x.c_str();
-        #text: !lambda |-
-        #  static const char * const mon_names[] = {"JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"};
-        #  static char date_buf[8];
-        #  auto now = id(current_date).now();
-        #  snprintf(date_buf, sizeof(date_buf), "%s %2d %s, ", mon_names[now.month-1], now.day_of_month, now.year);
-        #  return date_buf;
