@@ -11,12 +11,13 @@ text_sensor:
 time:
   - id: current_date
     platform: sntp
-    on_time_sync:
-      - script.execute: date_update
     on_time:
       - seconds: 10
         then:
-          - script.execute: date_update
+          - logger.log: Time trigger executed
+          #- lvgl.label.update:
+          #    id: lbl_weather_forecast_condition_date
+          #    text:
 
 script:
   - id: update_weather_icon
