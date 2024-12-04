@@ -14,7 +14,7 @@ time:
     on_time_sync:
       - script.execute: date_update
     on_time:
-      - minutes: '*'
+      - minutes: /1
         seconds: 0
         then:
           - script.execute: date_update
@@ -162,6 +162,6 @@ script:
         text: !lambda |-
           static const char * const mon_names[] = {"JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"};
           static char date_buf[8];
-          auto now = id(time_comp).now();
+          auto now = id(current_date).now();
           snprintf(date_buf, sizeof(date_buf), "%s %2d %s, ", mon_names[now.month-1], now.day_of_month, now.year);
           return date_buf;
