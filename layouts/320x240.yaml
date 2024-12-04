@@ -34,7 +34,7 @@ lvgl:
             layout:
               pad_column: 0
               type: GRID
-              grid_rows: [FR(48)]
+              grid_rows: [FR(10), FR(20), FR(20), FR(20), FR(15), FR(10), FR(5)]
               grid_columns: [FR(10), FR(40), FR(40), FR(10)]
             widgets:
               - label:
@@ -42,18 +42,29 @@ lvgl:
                   id: lbl_weather_forecast_condition_icon
                   text_font: icons_100
                   text_align: CENTER
-                  grid_cell_row_pos: 0
+                  grid_cell_row_pos: 1
+                  grid_cell_row_span: 3
                   grid_cell_column_pos: 0
                   grid_cell_column_span: 2
                   grid_cell_x_align: CENTER
-                  grid_cell_y_align: START
+                  grid_cell_y_align: CENTER
 
               - label:
-                  text: "Unknown"
-                  id: lbl_weather_forecast_condition_name
+                  text: "12-03-2024"
+                  id: lbl_weather_forecast_condition_date
                   text_align: CENTER
-                  grid_cell_row_pos: 0
+                  grid_cell_row_pos: 1
                   grid_cell_column_pos: 2
                   grid_cell_column_span: 2
+                  grid_cell_x_align: STRETCH
+                  grid_cell_y_align: CENTER
+
+              - label:
+                  text: "32F"
+                  id: lbl_weather_forecast_condition_temperature
+                  text_align: CENTER
+                  grid_cell_row_pos: 2
+                  grid_cell_column_pos: 2
+                  grid_cell_row_pos: 3
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: CENTER
