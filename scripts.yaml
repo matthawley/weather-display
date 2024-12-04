@@ -2,6 +2,8 @@ text_sensor:
   - platform: homeassistant
     id: weather_state
     entity_id: weather.precipitation_station
+    filters:
+      - to_lower:
     on_value:
       then:
         - script.execute: update_weather_icon
@@ -11,7 +13,9 @@ script:
   then:
     - if:
         condition:
-          lambda: return id(weather_state).state == "clear-night";
+          text_sensor.state:
+            id: weather_state
+            state: clear-night
         then:
           - lvgl.image.update:
               id: img_weather_forecast_icon
@@ -21,10 +25,9 @@ script:
               text: "CLEAR NIGHT"
     - if:
         condition:
-          - text_sensor.state:
-              id: weather_state
-              state: cloudy
-          #lambda: return id(weather_state).state == "cloudy";
+          text_sensor.state:
+            id: weather_state
+            state: cloudy
         then:
           - lvgl.image.update:
               id: img_weather_forecast_icon
@@ -34,7 +37,9 @@ script:
               text: "CLOUDY"
     - if:
         condition:
-          lambda: return id(weather_state).state == "fog";
+          text_sensor.state:
+            id: weather_state
+            src: fog
         then:
           - lvgl.image.update:
               id: img_weather_forecast_icon
@@ -44,7 +49,9 @@ script:
               text: "FOGGY"
     - if:
         condition:
-          lambda: return id(weather_state).state == "partlycloudy";
+          text_sensor.state:
+            id: weather_state
+            src: partlycloudy
         then:
           - lvgl.image.update:
               id: img_weather_forecast_icon
@@ -54,7 +61,9 @@ script:
               text: "PARTLY CLOUDY"
     - if:
         condition:
-          lambda: return id(weather_state).state == "rainy";
+          text_sensor.state:
+            id: weather_state
+            src: rainy
         then:
           - lvgl.image.update:
               id: img_weather_forecast_icon
@@ -64,7 +73,9 @@ script:
               text: "RAINY"
     - if:
         condition:
-          lambda: return id(weather_state).state == "snowy";
+          text_sensor.state:
+            id: weather_state
+            src: snowy
         then:
           - lvgl.image.update:
               id: img_weather_forecast_icon
@@ -74,7 +85,9 @@ script:
               text: "SNOWY"
     - if:
         condition:
-          lambda: return id(weather_state).state == "snowy-rainy";
+          text_sensor.state:
+            id: weather_state
+            src: snow-rainy
         then:
           - lvgl.image.update:
               id: img_weather_forecast_icon
@@ -84,7 +97,9 @@ script:
               text: "RAINY SNOW"
     - if:
         condition:
-          lambda: return id(weather_state).state == "lightning-rainy";
+          text_sensor.state:
+            id: weather_state
+            src: lightning-rainy
         then:
           - lvgl.image.update:
               id: img_weather_forecast_icon
@@ -94,7 +109,9 @@ script:
               text: "THUNDERSTORM"
     - if:
         condition:
-          lambda: return id(weather_state).state == "sunny";
+          text_sensor.state:
+            id: weather_state
+            src: sunny
         then:
           - lvgl.image.update:
               id: img_weather_forecast_icon
@@ -104,7 +121,9 @@ script:
               text: "CLEAR SKY"
     - if:
         condition:
-          lambda: return id(weather_state).state == "lightning";
+          text_sensor.state:
+            id: weather_state
+            src: lightning
         then:
           - lvgl.image.update:
               id: img_weather_forecast_icon
@@ -114,7 +133,9 @@ script:
               text: "THUNDER"
     - if:
         condition:
-          lambda: return id(weather_state).state == "windy";
+          text_sensor.state:
+            id: weather_state
+            src: windy
         then:
           - lvgl.image.update:
               id: img_weather_forecast_icon
