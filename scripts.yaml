@@ -1,7 +1,7 @@
 text_sensor:
   - platform: homeassistant
     id: weather_state
-    entity_id: weather.precipitation_station
+    entity_id: input_text.weather_display_state
     on_value:
       then:
         - script.execute: update_weather_icon
