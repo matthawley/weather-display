@@ -23,137 +23,137 @@ text_sensor:
         - script.execute: update_weather_icon
 
 script:
-  id: update_weather_icon
-  then:
-    - if:
-        condition:
-          text_sensor.state:
-            id: weather_state
-            state: clear-night
-        then:
-          - lvgl.image.update:
-              id: img_weather_forecast_icon
-              src: clear_night
-          - lvgl.label.update:
-              id: lbl_weather_forecast_condition_state
-              text: "CLEAR NIGHT"
-    - if:
-        condition:
-          text_sensor.state:
-            id: weather_state
-            state: cloudy
-        then:
-          - lvgl.image.update:
-              id: img_weather_forecast_icon
-              src: cloudy
-          - lvgl.label.update:
-              id: lbl_weather_forecast_condition_state
-              text: "CLOUDY"
-    - if:
-        condition:
-          text_sensor.state:
-            id: weather_state
-            state: fog
-        then:
-          - lvgl.image.update:
-              id: img_weather_forecast_icon
-              src: foggy
-          - lvgl.label.update:
-              id: lbl_weather_forecast_condition_state
-              text: "FOGGY"
-    - if:
-        condition:
-          text_sensor.state:
-            id: weather_state
-            state: partlycloudy
-        then:
-          - lvgl.image.update:
-              id: img_weather_forecast_icon
-              src: partly_cloudy
-          - lvgl.label.update:
-              id: lbl_weather_forecast_condition_state
-              text: "PARTLY CLOUDY"
-    - if:
-        condition:
-          text_sensor.state:
-            id: weather_state
-            state: rainy
-        then:
-          - lvgl.image.update:
-              id: img_weather_forecast_icon
-              src: rainy
-          - lvgl.label.update:
-              id: lbl_weather_forecast_condition_state
-              text: "RAINY"
-    - if:
-        condition:
-          text_sensor.state:
-            id: weather_state
-            state: snowy
-        then:
-          - lvgl.image.update:
-              id: img_weather_forecast_icon
-              src: snowy
-          - lvgl.label.update:
-              id: lbl_weather_forecast_condition_state
-              text: "SNOWY"
-    - if:
-        condition:
-          text_sensor.state:
-            id: weather_state
-            state: snow-rainy
-        then:
-          - lvgl.image.update:
-              id: img_weather_forecast_icon
-              src: snowy
-          - lvgl.label.update:
-              id: lbl_weather_forecast_condition_state
-              text: "RAINY SNOW"
-    - if:
-        condition:
-          text_sensor.state:
-            id: weather_state
-            state: lightning-rainy
-        then:
-          - lvgl.image.update:
-              id: img_weather_forecast_icon
-              src: stormy
-          - lvgl.label.update:
-              id: lbl_weather_forecast_condition_state
-              text: "THUNDERSTORM"
-    - if:
-        condition:
-          text_sensor.state:
-            id: weather_state
-            state: sunny
-        then:
-          - lvgl.image.update:
-              id: img_weather_forecast_icon
-              src: sunny
-          - lvgl.label.update:
-              id: lbl_weather_forecast_condition_state
-              text: "CLEAR SKY"
-    - if:
-        condition:
-          text_sensor.state:
-            id: weather_state
-            state: lightning
-        then:
-          - lvgl.image.update:
-              id: img_weather_forecast_icon
-              src: thunder
-          - lvgl.label.update:
-              id: lbl_weather_forecast_condition_state
-              text: "THUNDER"
-    - if:
-        condition:
-          text_sensor.state:
-            id: weather_state
-            state: windy
-        then:
-          - lvgl.image.update:
-              id: img_weather_forecast_icon
-              src: windy
-          - lvgl.label.update:
-              id: lbl_weather_forecast_condition_state
-              text: "WINDY"
+  - id: update_weather_icon
+    then:
+      - if:
+          condition:
+            text_sensor.state:
+              id: weather_state
+              state: clear-night
+          then:
+            - lvgl.image.update:
+                id: img_weather_forecast_icon
+                src: clear_night
+            - lvgl.label.update:
+                id: lbl_weather_forecast_condition_state
+                text: "CLEAR NIGHT"
+      - if:
+          condition:
+            text_sensor.state:
+              id: weather_state
+              state: cloudy
+          then:
+            - lvgl.image.update:
+                id: img_weather_forecast_icon
+                src: cloudy
+            - lvgl.label.update:
+                id: lbl_weather_forecast_condition_state
+                text: "CLOUDY"
+      - if:
+          condition:
+            text_sensor.state:
+              id: weather_state
+              state: fog
+          then:
+            - lvgl.image.update:
+                id: img_weather_forecast_icon
+                src: foggy
+            - lvgl.label.update:
+                id: lbl_weather_forecast_condition_state
+                text: "FOGGY"
+      - if:
+          condition:
+            text_sensor.state:
+              id: weather_state
+              state: partlycloudy
+          then:
+            - lvgl.image.update:
+                id: img_weather_forecast_icon
+                src: partly_cloudy
+            - lvgl.label.update:
+                id: lbl_weather_forecast_condition_state
+                text: "PARTLY CLOUDY"
+      - if:
+          condition:
+            text_sensor.state:
+              id: weather_state
+              state: rainy
+          then:
+            - lvgl.image.update:
+                id: img_weather_forecast_icon
+                src: rainy
+            - lvgl.label.update:
+                id: lbl_weather_forecast_condition_state
+                text: "RAINY"
+      - if:
+          condition:
+            text_sensor.state:
+              id: weather_state
+              state: snowy
+          then:
+            - lvgl.image.update:
+                id: img_weather_forecast_icon
+                src: snowy
+            - lvgl.label.update:
+                id: lbl_weather_forecast_condition_state
+                text: "SNOWY"
+      - if:
+          condition:
+            text_sensor.state:
+              id: weather_state
+              state: snow-rainy
+          then:
+            - lvgl.image.update:
+                id: img_weather_forecast_icon
+                src: snowy
+            - lvgl.label.update:
+                id: lbl_weather_forecast_condition_state
+                text: "RAINY SNOW"
+      - if:
+          condition:
+            text_sensor.state:
+              id: weather_state
+              state: lightning-rainy
+          then:
+            - lvgl.image.update:
+                id: img_weather_forecast_icon
+                src: stormy
+            - lvgl.label.update:
+                id: lbl_weather_forecast_condition_state
+                text: "THUNDERSTORM"
+      - if:
+          condition:
+            text_sensor.state:
+              id: weather_state
+              state: sunny
+          then:
+            - lvgl.image.update:
+                id: img_weather_forecast_icon
+                src: sunny
+            - lvgl.label.update:
+                id: lbl_weather_forecast_condition_state
+                text: "CLEAR SKY"
+      - if:
+          condition:
+            text_sensor.state:
+              id: weather_state
+              state: lightning
+          then:
+            - lvgl.image.update:
+                id: img_weather_forecast_icon
+                src: thunder
+            - lvgl.label.update:
+                id: lbl_weather_forecast_condition_state
+                text: "THUNDER"
+      - if:
+          condition:
+            text_sensor.state:
+              id: weather_state
+              state: windy
+          then:
+            - lvgl.image.update:
+                id: img_weather_forecast_icon
+                src: windy
+            - lvgl.label.update:
+                id: lbl_weather_forecast_condition_state
+                text: "WINDY"
