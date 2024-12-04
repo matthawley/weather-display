@@ -21,7 +21,7 @@ script:
               text: "CLEAR NIGHT"
     - if:
         condition:
-          - text_sensor.weather_state.state: cloudy
+          - text_sensor.weather_state: cloudy
           #lambda: return id(weather_state).state == "cloudy";
         then:
           - lvgl.image.update:
