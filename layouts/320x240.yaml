@@ -117,9 +117,3 @@ sensor:
             text:
               format: "%.0f %%"
               args: [ 'x' ]
-
-text:
-  - platform: lvgl
-    name: last_updated
-    widget: lbl_weather_forecast_condition_last_updated
-    mode: text
