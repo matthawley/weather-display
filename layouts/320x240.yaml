@@ -108,7 +108,7 @@ lvgl:
                   grid_cell_y_align: CENTER
               
               - label:
-                  text: "--\u00B0F"
+                  text: "--\u 00B0F"
                   id: lbl_weather_forecast_condition_temperature
                   text_align: CENTER
                   grid_cell_row_pos: 1
@@ -156,3 +156,25 @@ lvgl:
                   grid_cell_column_span: 3
                   grid_cell_x_align: CENTER
                   grid_cell_y_align: CENTER
+
+  text:
+    - platform: lvgl
+      name: icon
+      widget: lbl_weather_forecast_condition_icon
+      mode: text
+    - platform: lvgl
+      name: date
+      widget: lbl_weather_forecast_condition_date
+      mode: text
+    - platform: lvgl
+      name: temperature
+      widget: lbl_weather_forecast_condition_temperature
+      mode: text
+    - platform: lvgl
+      name: humidity
+      widget: lbl_weather_forecast_condition_humidity
+      mode: text
+    - mode: lvgl
+      name: last_updated
+      widget: lbl_weather_forecast_condition_last_updated
+      mode: text
