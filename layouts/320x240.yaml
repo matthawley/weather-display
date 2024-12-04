@@ -21,3 +21,29 @@ font:
       "\U000F059E", # windy-variant
       "\U000F14E4", # sunny-off
       ]
+
+lvgl:
+  pages:
+    - id: weather_forecast
+      widgets:
+        - obj:
+            align: CENTER
+            width: 228
+            height: 250
+            pad_all: 10
+            layout:
+              pad_column: 0
+              type: GRID
+              grid_rows: [FR(48)]
+              grid_columns: [FR(10), FR(40)]
+            widgets:
+              - label:
+                  text: "\U000F14E4"
+                  id: lbl_weather_forecast_condition_icon
+                  text_font: icons_100
+                  text_align: CENTER
+                  grid_cell_row_pos: 0
+                  grid_cell_column_pos: 0
+                  grid_cell_column_span: 2
+                  grid_cell_x_align: CENTER
+                  grid_cell_y_align: START
