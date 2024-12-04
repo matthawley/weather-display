@@ -91,7 +91,7 @@ lvgl:
                   id: lbl_weather_forecast_condition_date
                   text_font: roboto_xlg
                   text_align: CENTER
-                  recolor: teal
+                  text_color: teal
                   grid_cell_row_pos: 0
                   grid_cell_column_pos: 1
                   grid_cell_column_span: 2
@@ -150,7 +150,7 @@ lvgl:
                   id: lbl_weather_forecast_condition_last_updated
                   text_font: roboto_sm
                   text_align: CENTER
-                  recolor: grey
+                  text_color: grey
                   grid_cell_row_pos: 4
                   grid_cell_column_pos: 0
                   grid_cell_column_span: 3
