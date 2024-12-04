@@ -64,6 +64,5 @@ lvgl:
                   text_align: CENTER
                   grid_cell_row_pos: 2
                   grid_cell_column_pos: 2
-                  grid_cell_row_pos: 3
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: CENTER
