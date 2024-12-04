@@ -103,21 +103,25 @@ sensor:
         - lvgl.label.update:
             id: lbl_weather_forecast_condition_temperature
             text:
-              format: "%.0f \u00B0F"
+              format: "%.0f °F"
+              args: [ 'x' ]
+
+  - id: weather_humidity
+    platform: homeassistant
+    entity_id: weather.precipitation_station
+    attribute: humidity
+    on_value:
+      then:
+        - lvgl.label.update:
+            id: lbl_weather_forecast_condition_humidity
+            text:
+              format: "%.0f%"
               args: [ 'x' ]
 
 text:
   - platform: lvgl
     name: date
     widget: lbl_weather_forecast_condition_date
-    mode: text
-  - platform: lvgl
-    name: temperature
-    widget: lbl_weather_forecast_condition_temperature
-    mode: text
-  - platform: lvgl
-    name: humidity
-    widget: lbl_weather_forecast_condition_humidity
     mode: text
   - platform: lvgl
     name: last_updated
