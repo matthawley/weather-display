@@ -174,7 +174,7 @@ lvgl:
       name: humidity
       widget: lbl_weather_forecast_condition_humidity
       mode: text
-    - mode: lvgl
+    - platform: lvgl
       name: last_updated
       widget: lbl_weather_forecast_condition_last_updated
       mode: text
