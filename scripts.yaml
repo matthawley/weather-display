@@ -4,7 +4,9 @@ time:
     on_time_sync:
       - script.execute: update_date
     on_time:
-      - seconds: 10
+      - hours: /1
+        minutes: 0
+        seconds: 0
         then:
           - script.execute: update_date
 
@@ -25,9 +27,9 @@ script:
           id: lbl_weather_forecast_condition_date
           text: !lambda |-
             static const char * const mon_names[] = {"JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"};
-            static char date_buf[8];
+            static char date_buf[10];
             auto now = id(ha_time).now();
-            snprintf(date_buf, sizeof(date_buf), "%s %2d", mon_names[now.month-1], now.day_of_month);
+            snprintf(date_buf, sizeof(date_buf), "%s %2d %2", mon_names[now.month-1], now.day_of_month, now.year);
             return date_buf;
   - id: update_weather_icon
     then:
