@@ -2,10 +2,11 @@ time:
   - id: ha_time
     platform: homeassistant
     on_time:
-      then:
-        - lvgl.label.update:
-            id: lbl_weather_forecast_condition_date
-            text: !lambda return id(ha_time).now().strftime("%Y-%m-%D");
+      - seconds: 10
+        then:
+          - lvgl.label.update:
+              id: lbl_weather_forecast_condition_date
+              text: !lambda return id(ha_time).now().strftime("%Y-%m-%D");
 
 text_sensor:
   - platform: homeassistant
