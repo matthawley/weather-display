@@ -8,7 +8,7 @@ script:
           - lvgl.image.update:
             id: img_weather_forecast_icon
             src: clear_night
-          - lvgl.label.update::
+          - lvgl.label.update:
             id: lbl_weather_forecast_condition_state
             text: "CLEAR NIGHT"
     - if:
@@ -18,7 +18,7 @@ script:
           - lvgl.image.update:
             id: img_weather_forecast_icon
             src: cloudy
-          - lvgl.label.update::
+          - lvgl.label.update:
             id: lbl_weather_forecast_condition_state
             text: "CLOUDY"
     - if:
@@ -28,7 +28,7 @@ script:
           - lvgl.image.update:
             id: img_weather_forecast_icon
             src: foggy
-          - lvgl.label.update::
+          - lvgl.label.update:
             id: lbl_weather_forecast_condition_state
             text: "FOGGY"
     #- if:
@@ -45,7 +45,7 @@ script:
           - lvgl.image.update:
             id: img_weather_forecast_icon
             src: partly_cloudy
-          - lvgl.label.update::
+          - lvgl.label.update:
             id: lbl_weather_forecast_condition_state
             text: "PARTLY CLOUDY"
     - if:
@@ -55,7 +55,7 @@ script:
           - lvgl.image.update:
             id: img_weather_forecast_icon
             src: rainy
-          - lvgl.label.update::
+          - lvgl.label.update:
             id: lbl_weather_forecast_condition_state
             text: "RAINY"
     - if:
@@ -65,7 +65,7 @@ script:
           - lvgl.image.update:
             id: img_weather_forecast_icon
             src: snowy
-          - lvgl.label.update::
+          - lvgl.label.update:
             id: lbl_weather_forecast_condition_state
             text: "SNOWY"
     - if:
@@ -75,7 +75,7 @@ script:
           - lvgl.image.update:
             id: img_weather_forecast_icon
             src: snowy
-          - lvgl.label.update::
+          - lvgl.label.update:
             id: lbl_weather_forecast_condition_state
             text: "RAINY SNOW"
     - if:
@@ -85,7 +85,7 @@ script:
           - lvgl.image.update:
             id: img_weather_forecast_icon
             src: stormy
-          - lvgl.label.update::
+          - lvgl.label.update:
             id: lbl_weather_forecast_condition_state
             text: "THUNDERSTORM"
     - if:
@@ -95,7 +95,7 @@ script:
           - lvgl.image.update:
             id: img_weather_forecast_icon
             src: sunny
-          - lvgl.label.update::
+          - lvgl.label.update:
             id: lbl_weather_forecast_condition_state
             text: "CLEAR SKY"
     - if:
@@ -105,7 +105,7 @@ script:
           - lvgl.image.update:
             id: img_weather_forecast_icon
             src: thunder
-          - lvgl.label.update::
+          - lvgl.label.update:
             id: lbl_weather_forecast_condition_state
             text: "THUNDER"
     - if:
@@ -115,6 +115,6 @@ script:
           - lvgl.image.update:
             id: img_weather_forecast_icon
             src: windy
-          - lvgl.label.update::
+          - lvgl.label.update:
             id: lbl_weather_forecast_condition_state
             text: "WINDY"
