@@ -28,14 +28,14 @@ lvgl:
       widgets:
         - obj:
             align: CENTER
-            width: 228
-            height: 250
+            width: 320
+            height: 240
             pad_all: 10
             layout:
               pad_column: 0
               type: GRID
               grid_rows: [FR(48)]
-              grid_columns: [FR(10), FR(40)]
+              grid_columns: [FR(10), FR(40), FR(40), FR(10)]
             widgets:
               - label:
                   text: "\U000F14E4"
@@ -47,3 +47,13 @@ lvgl:
                   grid_cell_column_span: 2
                   grid_cell_x_align: CENTER
                   grid_cell_y_align: START
+
+              - label:
+                  text: "Unknown"
+                  id: lbl_weather_forecast_condition_name
+                  text_align: CENTER
+                  grid_cell_row_pos: 0
+                  grid_cell_column_pos: 2
+                  grid_cell_column_span: 2
+                  grid_cell_x_align: STRETCH
+                  grid_cell_y_align: CENTER
