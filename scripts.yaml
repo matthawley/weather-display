@@ -19,7 +19,6 @@ text_sensor:
     on_value:
       then:
         - script.execute: update_weather_icon
-        - script.execute: update_last_reported
 
 script:
   - id: update_date
@@ -32,11 +31,6 @@ script:
             auto now = id(ha_time).now();
             snprintf(date_buf, sizeof(date_buf), "%s %d %d", mon_names[now.month-1], now.day_of_month, now.year);
             return date_buf;
-  - id: update_last_reported
-    then:
-      - lvgl.label.update:
-          id: lbl_weather_forecast_condition_last_updated
-          text: !lambda return id(weather_state).last_reported;
   - id: update_weather_icon
     then:
       - if:
