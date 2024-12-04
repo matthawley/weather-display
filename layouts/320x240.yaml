@@ -118,6 +118,7 @@ sensor:
               format: "%.0f %%"
               args: [ 'x' ]
 
+text_sensor:
   - id: weather_last_reported
     platform: homeassistant
     entity_id: weather.precipitation_station
