@@ -13,9 +13,9 @@ script:
   then:
     - if:
         condition:
-          - text_sensor.state:
-              id: weather_state
-              state: clear-night
+          text_sensor.state:
+            id: weather_state
+            state: clear-night
         then:
           - lvgl.image.update:
               id: img_weather_forecast_icon
@@ -25,9 +25,9 @@ script:
               text: "CLEAR NIGHT"
     - if:
         condition:
-          - text_sensor.state:
-              id: weather_state
-              state: cloudy
+          text_sensor.state:
+            id: weather_state
+            state: cloudy
         then:
           - lvgl.image.update:
               id: img_weather_forecast_icon
@@ -37,9 +37,9 @@ script:
               text: "CLOUDY"
     - if:
         condition:
-          - text_sensor.state:
-              id: weather_state
-              src: fog
+          text_sensor.state:
+            id: weather_state
+            state: fog
         then:
           - lvgl.image.update:
               id: img_weather_forecast_icon
@@ -49,9 +49,9 @@ script:
               text: "FOGGY"
     - if:
         condition:
-          - text_sensor.state:
-              id: weather_state
-              src: partlycloudy
+          text_sensor.state:
+            id: weather_state
+            state: partlycloudy
         then:
           - lvgl.image.update:
               id: img_weather_forecast_icon
@@ -61,9 +61,9 @@ script:
               text: "PARTLY CLOUDY"
     - if:
         condition:
-          - text_sensor.state:
-              id: weather_state
-              src: rainy
+          text_sensor.state:
+            id: weather_state
+            state: rainy
         then:
           - lvgl.image.update:
               id: img_weather_forecast_icon
@@ -73,9 +73,9 @@ script:
               text: "RAINY"
     - if:
         condition:
-          - text_sensor.state:
-              id: weather_state
-              src: snowy
+          text_sensor.state:
+            id: weather_state
+            state: snowy
         then:
           - lvgl.image.update:
               id: img_weather_forecast_icon
@@ -85,9 +85,9 @@ script:
               text: "SNOWY"
     - if:
         condition:
-          - text_sensor.state:
-              id: weather_state
-              src: snow-rainy
+          text_sensor.state:
+            id: weather_state
+            state: snow-rainy
         then:
           - lvgl.image.update:
               id: img_weather_forecast_icon
@@ -97,9 +97,9 @@ script:
               text: "RAINY SNOW"
     - if:
         condition:
-          - text_sensor.state:
-              id: weather_state
-              src: lightning-rainy
+          text_sensor.state:
+            id: weather_state
+            state: lightning-rainy
         then:
           - lvgl.image.update:
               id: img_weather_forecast_icon
@@ -109,9 +109,9 @@ script:
               text: "THUNDERSTORM"
     - if:
         condition:
-          - text_sensor.state:
-              id: weather_state
-              src: sunny
+          text_sensor.state:
+            id: weather_state
+            state: sunny
         then:
           - lvgl.image.update:
               id: img_weather_forecast_icon
@@ -121,9 +121,9 @@ script:
               text: "CLEAR SKY"
     - if:
         condition:
-          - text_sensor.state:
-              id: weather_state
-              src: lightning
+          text_sensor.state:
+            id: weather_state
+            state: lightning
         then:
           - lvgl.image.update:
               id: img_weather_forecast_icon
@@ -133,9 +133,9 @@ script:
               text: "THUNDER"
     - if:
         condition:
-          - text_sensor.state:
-              id: weather_state
-              src: windy
+          text_sensor.state:
+            id: weather_state
+            state: windy
         then:
           - lvgl.image.update:
               id: img_weather_forecast_icon
