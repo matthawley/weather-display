@@ -158,10 +158,10 @@ script:
   then:
     - lvgl.label.update:
         id: lbl_weather_forecast_condition_date
-        text: !lambda |-
-          static const char * const mon_names[] = {"JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"};
-          static char date_buf[8];
-          auto now = id(current_date).now();
-          snprintf(date_buf, sizeof(date_buf), "%s %2d %s, ", mon_names[now.month-1], now.day_of_month, now.year);
-          Serial.println(date_buf);
-          return date_buf;
+        text: !lambda x.c_str();
+        #text: !lambda |-
+        #  static const char * const mon_names[] = {"JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"};
+        #  static char date_buf[8];
+        #  auto now = id(current_date).now();
+        #  snprintf(date_buf, sizeof(date_buf), "%s %2d %s, ", mon_names[now.month-1], now.day_of_month, now.year);
+        #  return date_buf;
