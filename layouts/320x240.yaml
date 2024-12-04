@@ -188,7 +188,7 @@ text:
 
 image:
   - id: sunny
-    file: 'images/weather/stormy.png'
+    file: 'images/stormy.png'
     resize: 128x128
     type: RGB565
     use_transparency: True
