@@ -186,3 +186,9 @@ text:
     widget: lbl_weather_forecast_condition_last_updated
     mode: text
 
+image:
+  - id: sunny
+    file: 'images/weather/stormy.png'
+    resize: 128x128
+    type: RGB565
+    use_transparency: True
