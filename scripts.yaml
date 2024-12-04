@@ -21,7 +21,8 @@ script:
               text: "CLEAR NIGHT"
     - if:
         condition:
-          lambda: return id(weather_state).state == "cloudy";
+          - weather_state.state: cloudy
+          #lambda: return id(weather_state).state == "cloudy";
         then:
           - lvgl.image.update:
               id: img_weather_forecast_icon
@@ -39,13 +40,6 @@ script:
           - lvgl.label.update:
               id: lbl_weather_forecast_condition_state
               text: "FOGGY"
-    #- if:
-    #    condition:
-    #      lambda: return id(condition).state == "??clear-night";
-    #    then:
-    #      - lvgl.image.update:
-    #        id: img_weather_forecast_icon
-    #        src: partly_cloudy_night
     - if:
         condition:
           lambda: return id(weather_state).state == "partlycloudy";
