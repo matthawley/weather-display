@@ -94,15 +94,17 @@ lvgl:
                   grid_cell_x_align: CENTER
                   grid_cell_y_align: CENTER
 
-text_sensor:
-  - platform: homeassistant
-    id: weather_temperature
+sensor:
+  - id: weather_temperature
+    platform: homeassistant
     entity_id: sensor.precipitation_station_temperature
     on_value:
       then:
         - lvgl.label.update:
             id: lbl_weather_forecast_condition_temperature
-            text: !lambda return x;
+            text:
+              format: "%.0f \u00B0F"
+              args: [ 'x' ]
 
 text:
   - platform: lvgl
