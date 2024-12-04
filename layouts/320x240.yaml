@@ -118,14 +118,8 @@ sensor:
               format: "%.0f %%"
               args: [ 'x' ]
 
-text_sensor:
-  - id: weather_last_reported
-    platform: homeassistant
-    entity_id: weather.precipitation_station
-    attribute: last_reported
-    on_value:
-      then:
-        - logger.log: "Updating date"
-        - lvgl.label.update:
-            id: lbl_weather_forecast_condition_last_updated
-            text: !lambda return x;
+text:
+  - platform: lvgl
+    name: last_reported
+    widget: lbl_weather_forecast_condition_last_updated
+    mode: text
