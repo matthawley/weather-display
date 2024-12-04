@@ -10,11 +10,13 @@ text_sensor:
 
 time:
   - id: current_date
-    platform: homeassistant
+    platform: sntp
     on_time_sync:
       - script.execute: date_update
     on_time:
-      - script.execute: date_update
+      - seconds: 10
+        then:
+          - script.execute: date_update
 
 script:
   - id: update_weather_icon
