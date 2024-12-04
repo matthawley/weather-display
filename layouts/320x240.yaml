@@ -34,18 +34,17 @@ lvgl:
             layout:
               pad_column: 0
               type: GRID
-              grid_rows: [FR(10), FR(20), FR(20), FR(20), FR(15), FR(10), FR(5)]
-              grid_columns: [FR(10), FR(40), FR(40), FR(10)]
+              grid_rows: [FR(25), FR(20), FR(20), FR(20), FR(15)]
+              grid_columns: [FR(50), FR(10), FR(40)]
             widgets:
               - label:
                   text: "\U000F14E4"
                   id: lbl_weather_forecast_condition_icon
                   text_font: icons_100
                   text_align: CENTER
-                  grid_cell_row_pos: 1
+                  grid_cell_row_pos: 0
                   grid_cell_row_span: 3
                   grid_cell_column_pos: 0
-                  grid_cell_column_span: 2
                   grid_cell_x_align: CENTER
                   grid_cell_y_align: CENTER
 
@@ -53,8 +52,8 @@ lvgl:
                   text: "12-03-2024"
                   id: lbl_weather_forecast_condition_date
                   text_align: CENTER
-                  grid_cell_row_pos: 1
-                  grid_cell_column_pos: 2
+                  grid_cell_row_pos: 0
+                  grid_cell_column_pos: 1
                   grid_cell_column_span: 2
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: CENTER
@@ -63,7 +62,7 @@ lvgl:
                   text: "--\u00B0F"
                   id: lbl_weather_forecast_condition_temperature
                   text_align: CENTER
-                  grid_cell_row_pos: 2
+                  grid_cell_row_pos: 1
                   grid_cell_column_pos: 2
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: CENTER
@@ -72,7 +71,7 @@ lvgl:
                   text: "--%"
                   id: lbl_weather_forecast_condition_humidity
                   text_align: CENTER
-                  grid_cell_row_pos: 3
+                  grid_cell_row_pos: 2
                   grid_cell_column_pos: 2
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: CENTER
@@ -81,8 +80,18 @@ lvgl:
                   text: "LOADING..."
                   id: lbl_weather_forecast_condition_state
                   text_align: CENTER
+                  grid_cell_row_pos: 3
+                  grid_cell_column_pos: 0
+                  grid_cell_column_span: 3
+                  grid_cell_x_align: CENTER
+                  grid_cell_y_align: CENTER
+
+              - label:
+                  text: "Last Update: 10:47"
+                  id: lbl_weather_forecast_condition_last_updated
+                  text_align: CENTER
                   grid_cell_row_pos: 4
                   grid_cell_column_pos: 0
-                  grid_cell_column_span: 4
+                  grid_cell_column_span: 3
                   grid_cell_x_align: CENTER
-                  grid_cell_y_align: CENTER 
+                  grid_cell_y_align: CENTER
