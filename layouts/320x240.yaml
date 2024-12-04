@@ -1,36 +1,15 @@
-font:
-  - file: https://github.com/Pictogrammers/pictogrammers.github.io/raw/refs/heads/main/@mdi/font/7.4.47/fonts/materialdesignicons-webfont.ttf
-    id: icons_100
-    size: 100
-    bpp: 4
-    glyphs: [
-      "\U000F0594", # clear-night
-      "\U000F0590", # cloudy
-      "\U000F0F2F", # exceptional
-      "\U000F0591", # fog
-      "\U000F0592", # hail
-      "\U000F0593", # lightning
-      "\U000F067E", # lightning-rainy
-      "\U000F0595", # partlycloudy
-      "\U000F0596", # pouring
-      "\U000F0597", # rainy
-      "\U000F0598", # snowy
-      "\U000F067F", # snowy-rainy
-      "\U000F0599", # sunny
-      "\U000F059D", # windy
-      "\U000F059E", # windy-variant
-      "\U000F14E4", # sunny-off
-      ]
-  - file: https://github.com/Pictogrammers/pictogrammers.github.io/raw/refs/heads/main/@mdi/font/7.4.47/fonts/materialdesignicons-webfont.ttf
-    id: icons_24
-    size: 24
-    bpp: 4
-    glyphs: [
-      "\U000F050F", # thermometer
-      "\U000F058E", # water-percent
-      ]
+font: !include
+  file: fonts/fonts.yaml
+  vars:
+    text_sm: 14
+    text_md: 18
+    text_lg: 22
+    icons_md: 24
+    icons_lg: 100
 
 lvgl:
+  default_font: roboto_md
+  theme: !include themes/main.yaml
   pages:
     - id: weather_forecast
       widgets:
@@ -48,7 +27,7 @@ lvgl:
               - label:
                   text: "\U000F14E4"
                   id: lbl_weather_forecast_condition_icon
-                  text_font: icons_100
+                  text_font: icons_lg
                   text_align: CENTER
                   grid_cell_row_pos: 0
                   grid_cell_row_span: 3
@@ -63,15 +42,16 @@ lvgl:
                   grid_cell_row_pos: 0
                   grid_cell_column_pos: 1
                   grid_cell_column_span: 2
-                  grid_cell_x_align: CENTER
+                  grid_cell_x_align: STRETCH
                   grid_cell_y_align: CENTER
 
               - label:
                   text: "\U000F050F"
-                  text_font: icons_24
+                  text_font: icons_md
                   text_align: CENTER
                   grid_cell_row_pos: 1
                   grid_cell_column_pos: 1
+                  grid_cell_x_align: CENTER
                   grid_cell_y_align: CENTER
               
               - label:
@@ -80,15 +60,16 @@ lvgl:
                   text_align: CENTER
                   grid_cell_row_pos: 1
                   grid_cell_column_pos: 2
-                  grid_cell_x_align: STRETCH
+                  grid_cell_x_align: START
                   grid_cell_y_align: CENTER
 
               - label:
                   text: "\U000F058E"
-                  text_font: icons_24
+                  text_font: icons_md
                   text_align: CENTER
                   grid_cell_row_pos: 2
                   grid_cell_column_pos: 1
+                  grid_cell_x_align: CENTER
                   grid_cell_y_align: CENTER
 
               - label:
@@ -97,7 +78,7 @@ lvgl:
                   text_align: CENTER
                   grid_cell_row_pos: 2
                   grid_cell_column_pos: 2
-                  grid_cell_x_align: STRETCH
+                  grid_cell_x_align: START
                   grid_cell_y_align: CENTER
 
               - label:
