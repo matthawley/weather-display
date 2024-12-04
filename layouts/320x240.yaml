@@ -86,7 +86,7 @@ lvgl:
               #    grid_cell_x_align: CENTER
               #    grid_cell_y_align: CENTER
               - image:
-                  src: sunny
+                  src: stormy
                   grid_cell_row_pos: 0
                   grid_cell_row_span: 3
                   grid_cell_column_pos: 0
@@ -187,8 +187,8 @@ text:
     mode: text
 
 image:
-  - id: sunny
-    file: 'images/stormy.png'
+  - id: stormy
+    file: '../custom_icons/weather/stormy.png'
     resize: 128x128
     type: RGB565
     use_transparency: True
