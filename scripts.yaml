@@ -1,7 +1,12 @@
 time:
   - id: ha_time
     platform: homeassistant
-    
+    on_time:
+      then:
+        - lvgl.label.update:
+            id: lbl_weather_forecast_condition_date
+            text: !lambda return id(ha_time).now().strftime("%Y-%m-%D");
+
 text_sensor:
   - platform: homeassistant
     id: weather_state
@@ -11,11 +16,6 @@ text_sensor:
     on_value:
       then:
         - script.execute: update_weather_icon
-  - platform: template
-    name: "Current Time"
-    id: current_time
-    update_interval: 10s
-    lambda: return  id(ha_time).now().strftime("%H%M");
 
 script:
   id: update_weather_icon
