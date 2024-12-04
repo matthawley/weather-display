@@ -13,19 +13,11 @@ time:
     platform: homeassistant
 
 text_sensor:
-  - id: current_time
-    platform: template
-    lambda: |-
-      char str[17];
-      time_t currTime = id(ha_time).now().timestamp;
-      strftime(str, sizeof(str), "%Y-%m-%d", localtime(&currTime));
-      return { str };
+  - platform: template
+    name: "Current Time"
+    id: current_time
     update_interval: 10s
-    on_value:
-      then:
-        - lvgl.label.update:
-            id: lbl_weather_forecast_condition_date
-            text: !lambda return x;
+    lambda: return  id(ha_time).now().strftime("%H%M");
 
 script:
   - id: update_weather_icon
