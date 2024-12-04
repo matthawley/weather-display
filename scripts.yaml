@@ -6,7 +6,11 @@ time:
         then:
           - lvgl.label.update:
               id: lbl_weather_forecast_condition_date
-              text: !lambda return id(ha_time).now().strftime("%Y-%m-%D");
+              text: |-
+                char str[10];
+                time_t currTime = id(ha_time).now().timestamp;
+                strftime(str, sizeof(str), "%m-%d-%Y", localtime(&currTime));
+                return { str };
 
 text_sensor:
   - platform: homeassistant
