@@ -1,4 +1,9 @@
 image:
+  - id: loading
+    file: '../custom_icons/weather/loading.png'
+    resize: 128x128
+    type: RGB565
+    use_transparency: True
   - id: clear_night
     file: '../custom_icons/weather/clear_night.png'
     resize: 128x128

@@ -16,7 +16,7 @@ lvgl:
             widgets:
               - image:
                   id: img_weather_forecast_icon
-                  src: sunny
+                  src: loading
                   grid_cell_row_pos: 0
                   grid_cell_row_span: 3
                   grid_cell_column_pos: 0
@@ -24,7 +24,7 @@ lvgl:
                   grid_cell_y_align: CENTER
 
               - label:
-                  text: "12-03-2024"
+                  text: ""
                   id: lbl_weather_forecast_condition_date
                   text_font: roboto_xlg
                   text_align: CENTER
@@ -83,7 +83,7 @@ lvgl:
                   grid_cell_y_align: CENTER
 
               - label:
-                  text: "Last Update: 10:47"
+                  text: ""
                   id: lbl_weather_forecast_condition_last_updated
                   text_font: roboto_sm
                   text_align: CENTER
