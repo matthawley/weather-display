@@ -9,6 +9,16 @@ time:
         seconds: 0
         then:
           - script.execute: update_date
+      - hours: 2,3,4,5
+        minutes: 5
+        seconds: 0
+        then:
+          - switch.turn_on: switch_antiburn
+      - hours: 2,3,4,5
+        minutes: 35
+        seconds: 0
+        then:
+          - switch.turn_off: switch_antiburn
 
 text_sensor:
   - platform: homeassistant
@@ -19,6 +29,38 @@ text_sensor:
     on_value:
       then:
         - script.execute: update_weather_icon
+
+switch:
+  - id: switch_antiburn
+    platform: template
+    name: Antiburn
+    icon: mdi:television-shimmer
+    optimistic: true
+    entity_category: config
+    turn_on_action:
+      - if:
+          condition: lvgl.is_paused
+          then:
+            - lvgl.resume:
+            - lvgl.widget.redraw:
+      - lvgl.pause:
+          show_snow: true
+    turn_off_action:
+      - if:
+          condition: lvgl.is_paused
+          then:
+            - lvgl.resume:
+            - lvgl.widget.redraw:
+
+touchscreen:
+  - id: !extend main_display
+    on_release:
+      then:
+        - if:
+            condition: lvgl.is_paused
+            then:
+              - lvgl.resume:
+              - lvgl.widget.redraw:
 
 script:
   - id: update_date
