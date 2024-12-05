@@ -53,7 +53,7 @@ switch:
             - lvgl.widget.redraw:
 
 touchscreen:
-  - id: !extend main_display
+  - id: !extend main_touchscreen
     on_release:
       then:
         - if:
