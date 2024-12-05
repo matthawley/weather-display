@@ -118,12 +118,18 @@ sensor:
               format: "%.0f %%"
               args: [ 'x' ]
 
-text_sensor:
-  - id: last_reported
-    platform: homeassistant
-    entity_id: input_text.weather_display_last_reported
-    on_value:
-      then:
-        - lvgl.label.update:
-            id: lbl_weather_forecast_condition_last_updated
-            text: !lambda return x;
+text:
+  - platform: lvgl
+    name: last_reported
+    widget: lbl_weather_forecast_condition_last_updated
+    mode: text
+
+# text_sensor:
+#   - id: last_reported
+#     platform: homeassistant
+#     entity_id: input_text.weather_display_last_reported
+#     on_value:
+#       then:
+#         - lvgl.label.update:
+#             id: lbl_weather_forecast_condition_last_updated
+#             text: !lambda return x;
