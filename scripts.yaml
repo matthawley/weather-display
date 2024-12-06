@@ -20,6 +20,10 @@ time:
         then:
           - switch.turn_off: switch_antiburn
 
+sun:
+  latitude: 47.35031
+  longitude: -122.0412733
+
 text_sensor:
   - platform: homeassistant
     id: weather_state
@@ -113,13 +117,27 @@ script:
                 text: "FOGGY"
       - if:
           condition:
-            text_sensor.state:
-              id: weather_state
-              state: partlycloudy
+            - text_sensor.state:
+                id: weather_state
+                state: partlycloudy
+            - sun.is_above_horizon:
           then:
             - lvgl.image.update:
                 id: img_weather_forecast_icon
                 src: partly_cloudy
+            - lvgl.label.update:
+                id: lbl_weather_forecast_condition_state
+                text: "PARTLY CLOUDY"
+      - if:
+          condition:
+            - text_sensor.state:
+                id: weather_state
+                state: partlycloudy
+            - sun.is_below_horizon:
+          then:
+            - lvgl.image.update:
+                id: img_weather_forecast_icon
+                src: partly_cloudy_night
             - lvgl.label.update:
                 id: lbl_weather_forecast_condition_state
                 text: "PARTLY CLOUDY"
