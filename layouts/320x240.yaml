@@ -26,7 +26,6 @@ lvgl:
               - label:
                   text: " "
                   id: lbl_weather_forecast_condition_date
-                  text_align: CENTER
                   text_color: teal
                   grid_cell_row_pos: 0
                   grid_cell_column_pos: 1

@@ -24,7 +24,7 @@ font:
     file:
       type: gfonts
       family: Roboto
-    size: 26
+    size: 32
     bpp: 4
 
   - file: https://github.com/Pictogrammers/pictogrammers.github.io/raw/refs/heads/main/@mdi/font/7.4.47/fonts/materialdesignicons-webfont.ttf
@@ -38,7 +38,7 @@ font:
 
   - file: https://github.com/Pictogrammers/pictogrammers.github.io/raw/refs/heads/main/@mdi/font/7.4.47/fonts/materialdesignicons-webfont.ttf
     id: icons_lg
-    size: 32
+    size: 36
     bpp: 4
     glyphs: [
       "\U000F050F", # thermometer
