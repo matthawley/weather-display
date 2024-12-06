@@ -26,7 +26,6 @@ lvgl:
               - label:
                   text: " "
                   id: lbl_weather_forecast_condition_date
-                  text_font: roboto_xlg
                   text_align: CENTER
                   text_color: teal
                   grid_cell_row_pos: 0
@@ -37,7 +36,7 @@ lvgl:
 
               - label:
                   text: "\U000F050F"
-                  text_font: icons_md
+                  text_font: icons_lg
                   text_align: CENTER
                   grid_cell_row_pos: 1
                   grid_cell_column_pos: 1
@@ -48,6 +47,7 @@ lvgl:
                   text: "-- \u00B0F"
                   id: lbl_weather_forecast_condition_temperature
                   text_align: CENTER
+                  text_font: roboto_xlg
                   grid_cell_row_pos: 1
                   grid_cell_column_pos: 2
                   grid_cell_x_align: START

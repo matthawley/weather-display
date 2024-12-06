@@ -35,3 +35,12 @@ font:
       "\U000F050F", # thermometer
       "\U000F058E", # water-percent
       ]
+
+  - file: https://github.com/Pictogrammers/pictogrammers.github.io/raw/refs/heads/main/@mdi/font/7.4.47/fonts/materialdesignicons-webfont.ttf
+    id: icons_lg
+    size: 32
+    bpp: 4
+    glyphs: [
+      "\U000F050F", # thermometer
+      "\U000F058E", # water-percent
+      ]
